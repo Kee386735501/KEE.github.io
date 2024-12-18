@@ -3,7 +3,7 @@
 <html lang="cn">
 <head>
     <meta charset="utf-8" />
-    <title>Kee&#39;s Blogs</title>
+    <title> | Kee&#39;s Blogs</title>
     <meta name="author" content="Kee" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -42,7 +42,9 @@
 
 
 
-<script src="/js/lib/home.js"></script>
+
+
+
 
 <link rel="stylesheet" href="/css/main.css" />
 
@@ -152,40 +154,11 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="home-head">
-    <div
-        id="home-background"
-        ref="homeBackground"
-        data-images="/images/background.jpg"
-    ></div>
-    <div id="home-info" @click="homeClick">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>Kee&#39;s Blogs</h1>
-                <h3></h3>
-                <h5></h5>
-            </div>
-        </span>
+            <div class="article">
+    <div>
+        <h1></h1>
     </div>
-</div>
-<div
-    id="home-posts-wrap"
-    ref="homePostsWrap"
-    true
->
-    <div id="home-posts">
-        
-
-<div class="post">
-    <a href="/2024/12/17/Primer-C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-md/">
-        <h2 class="post-title">Primer C++ 学习笔记.md</h2>
-    </a>
-    <div class="category-and-date">
-        
+    <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
@@ -195,40 +168,9 @@
         
         
     </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2024/12/17/Primer-C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-md/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2024/12/17/Primer%20C++%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-        <h2 class="post-title"></h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/12/17
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h3 id="Primer-C-学习笔记"><a href="#Primer-C-学习笔记" class="headerlink" title="Primer C++ 学习笔记"></a>Primer C++ 学习笔记</h3><h4 id="1-C-基本内置类型"><a href="#1-C-基本内置类型" class="headerlink" title="1. C++ 基本内置类型"></a>1. C++ 基本内置类型</h4><h5 id="1-1-算术类型（arithmetic-type）"><a href="#1-1-算术类型（arithmetic-type）" class="headerlink" title="1.1 算术类型（arithmetic type）"></a>1.1 算术类型（arithmetic type）</h5><p>算术类型包括 整型 (<strong>intergral type</strong>,包括字符和布尔类型在内) ，和浮点型</p>
+    
+    <div class="content" v-pre>
+        <h3 id="Primer-C-学习笔记"><a href="#Primer-C-学习笔记" class="headerlink" title="Primer C++ 学习笔记"></a>Primer C++ 学习笔记</h3><h4 id="1-C-基本内置类型"><a href="#1-C-基本内置类型" class="headerlink" title="1. C++ 基本内置类型"></a>1. C++ 基本内置类型</h4><h5 id="1-1-算术类型（arithmetic-type）"><a href="#1-1-算术类型（arithmetic-type）" class="headerlink" title="1.1 算术类型（arithmetic type）"></a>1.1 算术类型（arithmetic type）</h5><p>算术类型包括 整型 (<strong>intergral type</strong>,包括字符和布尔类型在内) ，和浮点型</p>
 <img src="/home/simshine/.config/Typora/typora-user-images/image-20241217170654474.png" alt="image-20241217170654474" style="zoom: 80%;" />
 
 <p>除去布尔型和扩展的字符型之外 ， 其他整型可分为 <strong>signed</strong> （正，负，0）和 <strong>unsigned</strong> （只能表达大于等于0的数）</p>
@@ -273,54 +215,13 @@
 
 <p><strong>void</strong>* 是一种特殊的指针，可以存放任何对象的地址</p>
 
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2024/12/17/Primer%20C++%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="go-post">阅读全文</a>
-</div>
-
-
-        <div class="page-current">
-    
-    <span class="current">1</span>
-    
-    
-    
-    
-</div>
-
     </div>
     
-    <div id="home-card">
-        <div id="card-style">
-    <div id="card-div">
-        <div class="avatar">
-            <img src="/images/avatar.jpg" alt="avatar" />
-        </div>
-        <div class="name">Kee</div>
-        <div class="description">
-            <p>Description<br>…</p>
-
-        </div>
-        
-        
-        <div class="friend-links">
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://argvchs.github.io">Argvchs</a>
-            </div>
-            
-        </div>
-        
-    </div>
-</div>
-
-    </div>
+    
+    
+    
+    
+    
     
 </div>
 
@@ -352,6 +253,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>
