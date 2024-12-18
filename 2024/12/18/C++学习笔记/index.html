@@ -166,7 +166,7 @@
 <span id="more"></span>
 
 <h3 id="Primer-C-学习笔记"><a href="#Primer-C-学习笔记" class="headerlink" title="Primer C++ 学习笔记"></a>Primer C++ 学习笔记</h3><h4 id="1-C-基本内置类型"><a href="#1-C-基本内置类型" class="headerlink" title="1. C++ 基本内置类型"></a>1. C++ 基本内置类型</h4><h5 id="1-1-算术类型（arithmetic-type）"><a href="#1-1-算术类型（arithmetic-type）" class="headerlink" title="1.1 算术类型（arithmetic type）"></a>1.1 算术类型（arithmetic type）</h5><p>算术类型包括 整型 (<strong>intergral type</strong>,包括字符和布尔类型在内) ，和浮点型</p>
-<img src="/images/image-20241217170654474.png" alt="image-20241217170654474" style="zoom: 80%;" />
+<img src="/home/simshine/.config/Typora/typora-user-images/image-20241217170654474.png" alt="image-20241217170654474" style="zoom: 80%;" />
 
 <p>除去布尔型和扩展的字符型之外 ， 其他整型可分为 <strong>signed</strong> （正，负，0）和 <strong>unsigned</strong> （只能表达大于等于0的数）</p>
 <h5 id="2-2-变量"><a href="#2-2-变量" class="headerlink" title="2.2 变量"></a>2.2 变量</h5><p>​	<strong>对象（object）</strong>：一块能储存数据并且有某种类型的内存空间</p>
@@ -185,9 +185,8 @@
 <h6 id="2-2-4-名字的作用域"><a href="#2-2-4-名字的作用域" class="headerlink" title="2.2.4 名字的作用域"></a>2.2.4 名字的作用域</h6><p><strong>全局作用域 （global scope）</strong>:  一旦声明在整个程序范围内都可以使用</p>
 <p>**块作用域 （block  scope） **：局部作用域中使用</p>
 <p><strong>嵌套的作用域</strong>：</p>
-<pre><code>1.  内层作用域（inner scope）： 
-1.  外层作用域 （outer scope）
-</code></pre>
+<p>​	内层作用域（inner scope）： </p>
+<p>​	外层作用域 （outer scope）</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> reused = <span class="number">42</span>; <span class="comment">// reused 在外层作用域中定义</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> unique = <span class="number">0</span>; <span class="comment">// unique 在内层作用域中定义</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用外层作用域的 reused</span></span><br><span class="line">    std::cout &lt;&lt; reused &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; unique &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> reused = <span class="number">0</span>; <span class="comment">// 在内层作用域重新定义 reused</span></span><br><span class="line">    <span class="comment">// 使用内层作用域的 reused，覆盖了外层 reused</span></span><br><span class="line">    std::cout &lt;&lt; reused &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; unique &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 显式使用外层作用域的 reused</span></span><br><span class="line">    std::cout &lt;&lt; ::reused &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; unique &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>栗子：</p>
