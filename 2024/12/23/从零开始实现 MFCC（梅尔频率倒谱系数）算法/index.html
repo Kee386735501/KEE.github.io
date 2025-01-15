@@ -3,7 +3,7 @@
 <html lang="cn">
 <head>
     <meta charset="utf-8" />
-    <title> | Kee&#39;s Blogs</title>
+    <title>从零开始实现 MFCC（梅尔频率倒谱系数）算法 （一） | Kee&#39;s Blogs</title>
     <meta name="author" content="Kee" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -156,21 +156,45 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1></h1>
+        <h1>从零开始实现 MFCC（梅尔频率倒谱系数）算法 （一）</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2025/1/15
+            2024/12/23
         </span>
         
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/C/" style="color: #00a596">
+                    C++
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E7%AE%97%E6%B3%95/" style="color: #ff7d73">
+                    算法
+                </a>
+            </span>
+            
+        </span>
         
     </div>
     
     <div class="content" v-pre>
-        <h2 id="从零开始实现-MFCC（梅尔频率倒谱系数）算法-（一）"><a href="#从零开始实现-MFCC（梅尔频率倒谱系数）算法-（一）" class="headerlink" title="从零开始实现 MFCC（梅尔频率倒谱系数）算法 （一）"></a>从零开始实现 MFCC（梅尔频率倒谱系数）算法 （一）</h2><h3 id="什么是音频信号？"><a href="#什么是音频信号？" class="headerlink" title="什么是音频信号？"></a><strong>什么是音频信号？</strong></h3><p>音频信号是声音的数字化形式。声音首先被转换为电子信号，通过 <strong>PCM（Pulse Code Modulation，脉冲编码调制）</strong> 转换为数字信号，然后存储为我们常见的文件格式，如 WAV、MP3 等。</p>
+        <p>MFCC（梅尔频率倒谱系数）算法</p>
+<span id="more"></span>
+<h2 id="从零开始实现-MFCC（梅尔频率倒谱系数）算法-（一）"><a href="#从零开始实现-MFCC（梅尔频率倒谱系数）算法-（一）" class="headerlink" title="从零开始实现 MFCC（梅尔频率倒谱系数）算法 （一）"></a>从零开始实现 MFCC（梅尔频率倒谱系数）算法 （一）</h2><h3 id="什么是音频信号？"><a href="#什么是音频信号？" class="headerlink" title="什么是音频信号？"></a><strong>什么是音频信号？</strong></h3><p>音频信号是声音的数字化形式。声音首先被转换为电子信号，通过 <strong>PCM（Pulse Code Modulation，脉冲编码调制）</strong> 转换为数字信号，然后存储为我们常见的文件格式，如 WAV、MP3 等。</p>
 <hr>
 <h3 id="音频信号的本质"><a href="#音频信号的本质" class="headerlink" title="音频信号的本质"></a><strong>音频信号的本质</strong></h3><p>要理解音频信号的本质，我们需要先了解两个关键概念：<strong>采样（Sampling）</strong> 和 <strong>频率（Frequency）</strong>。</p>
 <h4 id="1-采样（Sampling）"><a href="#1-采样（Sampling）" class="headerlink" title="1. 采样（Sampling）"></a><strong>1. 采样（Sampling）</strong></h4><p>采样是将连续的模拟信号（例如声音、光信号）按照固定时间间隔，转换为<strong>离散的数字信号</strong>的过程。具体而言，采样通过记录信号在特定时间点的振幅值，将模拟信号数字化，便于存储和处理。</p>
